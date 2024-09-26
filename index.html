@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Birthday Babi</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="1-splash.css">
+    <script src="1-splash.js"></script>
+  </head>
+  <body>
+    <!-- (PART A) SPLASH SCREEN -->
+    <div id="splash" onclick="start()">&#127929; Click Me!</div>
+
+    <!-- (PART B) BGM -->
+    <audio id="bgm" src="audio.mp3" loop></audio>
+
+    <!-- (PART C) MAIN CONTENT -->
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Babi.</strong>
+                        <p>
+                            Happy Birthday to the only person I would rescue in the 
+							event of a zombie apocalypse. 
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+			<embed name="birthday" src="/music/birthday.mp3" loop="true" hidden="true" autostart="true">
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+  </body>
+</html>
